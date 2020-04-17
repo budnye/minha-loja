@@ -1,0 +1,5 @@
+<ion-slides [options]="slideOpts">
+  <ion-slide *ngFor="let d of deliveries">
+    <main-cards (updatedCards)="listar()" [delivery]="d"></main-cards>
+  </ion-slide>
+</ion-slides>

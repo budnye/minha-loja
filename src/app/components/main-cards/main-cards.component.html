@@ -1,0 +1,17 @@
+<ion-card>
+  <ion-item lines="none">
+    <ion-icon name="cart" slot="start" color="primary"></ion-icon>
+    <ion-label>{{delivery.title}} - #{{delivery.id}}</ion-label>
+    <ion-icon name="alert-circle" slot="end" color="danger"></ion-icon>
+  </ion-item>
+  <ion-card-content class="ion-text-left">
+    Produto(s): <b>{{getProducts(delivery.products)}}</b><br>
+    Cliente: <b> {{delivery.client.name}}</b><br>
+    Total: <b>R$ {{getTotal(delivery.products)}}</b>
+  </ion-card-content>
+  <ion-item>
+    <ion-button (click)="confirmDelete(delivery)" color="success" slot="start" size="small">Finalizar
+    </ion-button>
+    <ion-button (click)="presentModal()" id="btnView" slot="end" size="small">Abrir</ion-button>
+  </ion-item>
+</ion-card>
