@@ -9,7 +9,7 @@ import { DeliveryService } from 'src/app/services/delivery.service';
   styleUrls: ['./main-modal.component.scss'],
 })
 export class MainModalComponent {
-  @Input() notification: any;
+  @Input() delivery: any;
   @Input() slides: any;
   constructor(
     public modalController: ModalController,
@@ -46,7 +46,7 @@ export class MainModalComponent {
   async confirmDelete(delivery: Delivery) {
     let alerta = await this.alertController.create({
       header: 'Confirmação de finalização',
-      message: `Deseja finalizar a entrega de id #${delivery.id}?`,
+      message: `Deseja finalizar a entrega de id ${delivery.id}?`,
       buttons: [{
         text: 'SIM',
         handler: () => {
