@@ -24,7 +24,6 @@ export class MainSlidesComponent implements OnInit {
 
 
   async listar() {
-    console.log("listando...");
     const loading = await this.loadingController.create({
       message: 'Carregando...',
     });
@@ -35,7 +34,6 @@ export class MainSlidesComponent implements OnInit {
     });
   }
   ionViewWillEnter() {
-
   }
   ngOnInit() {
     this.listar();
