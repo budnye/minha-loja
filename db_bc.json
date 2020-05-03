@@ -144,5 +144,67 @@
       },
       "isRead": false
     }
+  ],
+  "clients": [
+    {
+      "name": "Eduardo Budny",
+      "cpf": "591.580.707-02",
+      "gender": "M",
+      "birth": "11/10/1989",
+      "email": "eduardo.budny@gmail.com"
+    },
+    {
+      "name": "Camila Citadin",
+      "cpf": "144.313.499-60",
+      "gender": "F",
+      "birth": "27/05/1988",
+      "email": "camila.citadin@gmail.com"
+    }
+  ],
+  "suppliers": [
+    {
+      "brand": "Natura",
+      "sellerName": "João da Mata",
+      "email": "j.mata@vendasnatura.com",
+      "cnpj": "77.961.324/0001-10"
+    },
+    {
+      "brand": "Avon",
+      "sellerName": "Carla Pietro",
+      "email": "carla.pietro@avon.com",
+      "cnpj": "34.226.169/0001-86"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Kit Natura 1",
+      "price": 79.90
+    },
+    {
+      "id": 3,
+      "name": "Sabonete Maracujá",
+      "price": 19.90
+    },
+    {
+      "id": 4,
+      "name": "Sabonete Menta",
+      "price": 19.90
+    }
+  ],
+  "orders": [
+    {
+      "supplier": "Natura",
+      "date": "10/05/2020",
+      "products": [
+        {
+          "id": 4,
+          "name": "Sabonete Menta",
+          "price": 6.50,
+          "qnt": 10,
+          "total": 65.00
+        }
+      ]
+    }
   ]
 }
