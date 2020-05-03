@@ -9,8 +9,10 @@ import { MainPageRoutingModule } from './main-routing.module';
 import { MainPage } from './main.page';
 import { MainCardsComponent } from './../../components/main-cards/main-cards.component';
 import { MainSlidesComponent } from './../../components/main-slides/main-slides.component';
-import { MainModalComponent } from 'src/app/components/main-modal/main-modal.component';
-import { ProductListComponent } from 'src/app/components/product-list/product-list.component';
+import { MainModalComponent } from './../../components/main-modal/main-modal.component';
+import { ProductListComponent } from './../../components/product-list/product-list.component';
+import { MainMenuComponent } from './../../components/main-menu/main-menu.component';
+import { MenuCardsComponent } from './../../components/menu-cards/menu-cards.component';
 
 @NgModule({
   imports: [
@@ -24,7 +26,9 @@ import { ProductListComponent } from 'src/app/components/product-list/product-li
     MainCardsComponent,
     MainSlidesComponent,
     MainModalComponent,
-    ProductListComponent
+    ProductListComponent,
+    MainMenuComponent,
+    MenuCardsComponent
   ],
   entryComponents: [
     MainModalComponent

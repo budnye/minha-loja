@@ -1,3 +1,14 @@
-<p>
-  main-menu works!
-</p>
+<ion-grid>
+  <ion-row class="ion-align-items-center ion-text-center">
+    <ion-col class="ion-align-self-center">
+      <div *ngFor="let cardInfo of cardsLeft">
+        <menu-cards [card]="cardInfo"></menu-cards>
+      </div>
+    </ion-col>
+    <ion-col class="ion-align-self-center">
+      <div *ngFor="let cardInfo of cardsRight">
+        <menu-cards [card]="cardInfo"></menu-cards>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
