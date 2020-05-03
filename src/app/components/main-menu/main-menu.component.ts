@@ -20,10 +20,10 @@ export class MainMenuComponent implements OnInit {
       link: '/produtos'
     },
     {
-      title: 'Pedidos',
-      icon: 'file-tray-full',
-      color: 'dark',
-      link: '/pedidos'
+      title: 'Sair',
+      icon: 'exit',
+      color: 'danger',
+      link: '/home'
     }
   ];
   cardsLeft = [
@@ -40,10 +40,10 @@ export class MainMenuComponent implements OnInit {
       link: '/fornecedores'
     },
     {
-      title: 'Sair',
-      icon: 'exit',
-      color: 'danger',
-      link: '/home'
+      title: 'Pedidos',
+      icon: 'file-tray-full',
+      color: 'dark',
+      link: '/pedidos'
     }
   ];
   constructor() { }
