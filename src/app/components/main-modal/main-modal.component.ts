@@ -34,15 +34,6 @@ export class MainModalComponent {
     return total;
   }
 
-  async presentModal() {
-    const modal = await this.modalController.create({
-      component: MainModalComponent,
-      componentProps: { delivery: this.delivery }
-    });
-    return await modal.present();
-  }
-
-
   async confirmDelete(delivery: Delivery) {
     const alerta = await this.alertController.create({
       header: 'Confirmação de finalização',

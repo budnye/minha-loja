@@ -8,6 +8,7 @@ import { ClientesPageRoutingModule } from './clientes-routing.module';
 
 import { ClientesPage } from './clientes.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { ClientsListItemComponent } from 'src/app/components/clients-list-item/clients-list-item.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { ComponentsModule } from 'src/app/components/components.module';
     ClientesPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [ClientesPage]
+  declarations: [ClientesPage, ClientsListItemComponent]
 })
 export class ClientesPageModule { }

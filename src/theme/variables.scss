@@ -3,6 +3,25 @@
 
 /** Ionic CSS Variables **/
 :root {
+  /** Custom CSS for all app **/
+  h1 {
+    color: #ffffff;
+  }
+  
+  ion-content {
+    --background: rgb(89,89,178);
+    --background: linear-gradient(180deg, rgba(89,89,178,1) 0%, rgba(147,147,242,1) 65%, rgba(255,255,255,1) 100%);
+  }
+
+  .txt-white {
+    --ion-text-color: #FFF;
+  }
+
+  .bg-transparent {
+    background: transparent;
+  }
+  --ion-toolbar-background: var(--ion-color-primary);
+
   /** primary **/
   --ion-color-primary: #5959b2;
   --ion-color-primary-rgb: rgb(89, 89, 178);

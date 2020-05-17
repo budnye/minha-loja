@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeliveryService } from 'src/app/services/delivery.service';
-import { AlertController, LoadingController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'main-slides',
@@ -17,7 +17,6 @@ export class MainSlidesComponent implements OnInit {
   };
 
   constructor(
-    private alertController: AlertController,
     private deliveryService: DeliveryService,
     private loadingController: LoadingController
   ) { }

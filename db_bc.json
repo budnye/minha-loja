@@ -147,6 +147,7 @@
   ],
   "clients": [
     {
+      "id": 1,
       "name": "Eduardo Budny",
       "cpf": "591.580.707-02",
       "gender": "M",
@@ -154,6 +155,7 @@
       "email": "eduardo.budny@gmail.com"
     },
     {
+      "id": 2,
       "name": "Camila Citadin",
       "cpf": "144.313.499-60",
       "gender": "F",
@@ -163,12 +165,14 @@
   ],
   "suppliers": [
     {
+      "id": 1,
       "brand": "Natura",
       "sellerName": "João da Mata",
       "email": "j.mata@vendasnatura.com",
       "cnpj": "77.961.324/0001-10"
     },
     {
+      "id": 2,
       "brand": "Avon",
       "sellerName": "Carla Pietro",
       "email": "carla.pietro@avon.com",
@@ -194,6 +198,7 @@
   ],
   "orders": [
     {
+      "id": 1,
       "supplier": "Natura",
       "date": "10/05/2020",
       "products": [

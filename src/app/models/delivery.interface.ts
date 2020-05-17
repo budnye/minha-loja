@@ -3,5 +3,5 @@ interface Delivery {
   title: string;
   products: any;
   client: any;
-  isRead: boolean;
+  isDone: boolean;
 }

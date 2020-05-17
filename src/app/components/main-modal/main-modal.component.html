@@ -1,9 +1,9 @@
-<ion-header color="primary">
-  <ion-toolbar color="primary">
+<ion-header>
+  <ion-toolbar>
     <ion-title>{{delivery.title}} - #{{delivery.id}}</ion-title>
     <ion-buttons slot="primary">
       <ion-button (click)="dismissModal()">
-        <ion-icon slot="icon-only" name="close"></ion-icon>
+        <ion-icon slot="icon-only" name="close" color="light"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -22,10 +22,10 @@
     <ion-button (click)="confirmDelete(delivery)" color="success" slot="start" size="default">
       Finalizar
     </ion-button>
-    <ion-button color="danger" slot="end" size="default">
+    <ion-button color="danger" slot="end" size="default" (click)="dismissModal()">
       Cancelar
     </ion-button>
   </ion-item>
 
 
-</ion-content>`
+</ion-content>
