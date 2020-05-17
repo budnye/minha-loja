@@ -8,7 +8,9 @@ import { ClientesPageRoutingModule } from './clientes-routing.module';
 
 import { ClientesPage } from './clientes.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { ClientsListComponent } from 'src/app/components/clients-list/clients-list.component';
 import { ClientsListItemComponent } from 'src/app/components/clients-list-item/clients-list-item.component';
+import { ClientsModalComponent } from 'src/app/components/clients-modal/clients-modal.component';
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import { ClientsListItemComponent } from 'src/app/components/clients-list-item/c
     ClientesPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [ClientesPage, ClientsListItemComponent]
+  declarations: [ClientesPage, ClientsListComponent, ClientsListItemComponent, ClientsModalComponent],
+
+  entryComponents: [ClientsModalComponent]
 })
 export class ClientesPageModule { }
