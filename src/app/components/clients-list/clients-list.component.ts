@@ -15,7 +15,7 @@ export class ClientsListComponent implements OnInit {
     private clientsService: ClientService,
   ) { }
 
-  async listar() {
+  async list() {
     const loading = await this.loadingController.create({
       message: 'Carregando...',
     });
@@ -27,7 +27,11 @@ export class ClientsListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listar();
+    this.list();
+  }
+
+  ionViewWillEnter() {
+    this.list();
   }
 
 }

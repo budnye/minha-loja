@@ -33,6 +33,7 @@ export class MainSlidesComponent implements OnInit {
     });
   }
   ionViewWillEnter() {
+    this.listar();
   }
   ngOnInit() {
     this.listar();

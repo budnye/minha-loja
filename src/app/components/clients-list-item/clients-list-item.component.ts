@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ClientService } from 'src/app/services/client.service';
 import { ClientsModalComponent } from '../clients-modal/clients-modal.component';
 import { ModalController } from '@ionic/angular';
 
@@ -16,7 +15,9 @@ export class ClientsListItemComponent implements OnInit {
     const modal = await this.modalController.create({
       component: ClientsModalComponent,
       componentProps: {
-        client: this.client
+        client: this.client,
+        isReadonly: true,
+        isNew: false,
       }
     });
     return await modal.present();

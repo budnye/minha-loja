@@ -3,5 +3,4 @@ interface Client {
   name: string;
   cpf: string;
   birth: Date;
-  email: string;
 }

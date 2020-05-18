@@ -46,7 +46,7 @@ export class MainCardsComponent implements OnInit {
   }
 
   async confirmDelete(delivery: Delivery) {
-    let alerta = await this.alertController.create({
+    let alert = await this.alertController.create({
       header: 'Confirmação de finalização',
       message: `Deseja finalizar a entrega de id ${delivery.id}?`,
       buttons: [{
@@ -58,7 +58,7 @@ export class MainCardsComponent implements OnInit {
         text: 'NÃO'
       }]
     });
-    alerta.present();
+    alert.present();
   }
 
   delete(delivery: Delivery) {

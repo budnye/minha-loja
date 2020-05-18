@@ -1,7 +1,8 @@
 <ion-header>
   <ion-toolbar [color]="isReadonly ? 'primary' : 'danger'">
     <ion-title *ngIf="isReadonly">{{ client.name }}</ion-title>
-    <ion-title *ngIf="!isReadonly">Editando...</ion-title>
+    <ion-title *ngIf="(!isReadonly && !isNew)">Editando...</ion-title>
+    <ion-title *ngIf="(!isReadonly && isNew)">Cadastrando cliente...</ion-title>
     <ion-buttons slot="primary">
       <ion-button (click)="dismissModal()">
         <ion-icon slot="icon-only" name="close" color="light"></ion-icon>
@@ -37,7 +38,7 @@
       </ion-label>
     </ion-item>
     <ion-item class="txt-white" color="none" lines="white">
-      <ion-input #cpf="ngModel" type="text" [(ngModel)]="client.cpf" name="cpf" required minlength="11"
+      <ion-input #cpf="ngModel" type="text" [(ngModel)]="client.cpf" name="cpf" maxlength="11" required minlength="11"
         pattern="[0-9]{11}" [readonly]="isReadonly">
       </ion-input>
       <ion-text color="danger" *ngIf="cpf.invalid && (cpf.dirty || cpf.touched)">
@@ -57,7 +58,7 @@
       </ion-label>
     </ion-item>
     <ion-item class="txt-white" color="none" lines="white">
-      <ion-input type="date" [(ngModel)]="client.birth" name="birth"></ion-input>
+      <ion-input type="date" [(ngModel)]="client.birth" name="birth" [readonly]="isReadonly"></ion-input>
     </ion-item>
     <ion-item class="txt-white" color="none" lines="none">
       <ion-button color="danger" slot="start" size="default" (click)="dismissModal()">
