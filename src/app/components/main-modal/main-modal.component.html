@@ -19,13 +19,11 @@
   </ion-item>
   <product-list [products]="delivery.products"></product-list>
   <ion-item class="txt-white" color="none" lines="none">
-    <ion-button (click)="confirmDelete(delivery)" color="success" slot="start" size="default">
-      Finalizar
-    </ion-button>
-    <ion-button color="danger" slot="end" size="default" (click)="dismissModal()">
+    <ion-button color="danger" slot="start" size="default" (click)="dismissModal()">
       Cancelar
     </ion-button>
+    <ion-button (click)="confirmDelete(delivery)" color="success" slot="end" size="default">
+      Finalizar
+    </ion-button>
   </ion-item>
-
-
 </ion-content>

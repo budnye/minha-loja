@@ -13,11 +13,27 @@ export class ClientService {
     return this.httpClient.get<Client[]>(this.URI);
   }
 
-  delete(client) {
+  delete(client: Client) {
     return this.httpClient.delete<Client[]>(`${this.URI}/${client.id}`);
   }
 
-  getClientInfo(client) {
+  getClientInfo(client: Client) {
     return this.httpClient.get<Client[]>(`${this.URI}/${client.id}`);
+  }
+
+  private add(client: Client) {
+    return this.httpClient.post(this.URI, client);
+  }
+
+  private update(client: Client) {
+    return this.httpClient.put(`${this.URI}/${client.id}`, client);
+  }
+
+  save(client: Client) {
+    if (client.id) {
+      return this.update(client);
+    } else {
+      return this.add(client);
+    }
   }
 }

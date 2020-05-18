@@ -1,29 +1,6 @@
 {
   "deliveries": [
     {
-      "id": 1,
-      "title": "Entrega 1",
-      "products": [
-        {
-          "id": 1,
-          "name": "Kit Natura 1",
-          "price": 79,
-          "qnt": 1
-        },
-        {
-          "id": 3,
-          "name": "Sabonete Maracujá",
-          "price": 19,
-          "qnt": 1
-        }
-      ],
-      "client": {
-        "id": 1,
-        "name": "Eduardo Budny"
-      },
-      "isRead": false
-    },
-    {
       "id": 2,
       "title": "Entrega 2",
       "products": [
@@ -49,29 +26,6 @@
       "client": {
         "id": 1,
         "name": "Camila Milaneze"
-      },
-      "isRead": false
-    },
-    {
-      "id": 3,
-      "title": "Entrega 3",
-      "products": [
-        {
-          "id": 1,
-          "name": "Kit Natura 1",
-          "price": 79,
-          "qnt": 1
-        },
-        {
-          "id": 3,
-          "name": "Sabonete Maracujá",
-          "price": 19,
-          "qnt": 1
-        }
-      ],
-      "client": {
-        "id": 1,
-        "name": "Eduardo Budny"
       },
       "isRead": false
     },
@@ -149,17 +103,17 @@
     {
       "id": 1,
       "name": "Eduardo Budny",
-      "cpf": "591.580.707-02",
+      "cpf": "05606847973",
       "gender": "M",
-      "birth": "11/10/1989",
+      "birth": "2020-05-14",
       "email": "eduardo.budny@gmail.com"
     },
     {
       "id": 2,
       "name": "Camila Citadin",
-      "cpf": "144.313.499-60",
+      "cpf": "14423423444",
       "gender": "F",
-      "birth": "27/05/1988",
+      "birth": "1988-05-27",
       "email": "camila.citadin@gmail.com"
     },
     {
@@ -263,17 +217,17 @@
     {
       "id": 1,
       "name": "Kit Natura 1",
-      "price": 79.90
+      "price": 79.9
     },
     {
       "id": 3,
       "name": "Sabonete Maracujá",
-      "price": 19.90
+      "price": 19.9
     },
     {
       "id": 4,
       "name": "Sabonete Menta",
-      "price": 19.90
+      "price": 19.9
     }
   ],
   "orders": [
@@ -285,9 +239,9 @@
         {
           "id": 4,
           "name": "Sabonete Menta",
-          "price": 6.50,
+          "price": 6.5,
           "qnt": 10,
-          "total": 65.00
+          "total": 65
         }
       ]
     }
