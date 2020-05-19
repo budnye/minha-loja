@@ -174,18 +174,16 @@
   ],
   "suppliers": [
     {
-      "id": 1,
-      "brand": "Natura",
-      "sellerName": "João da Mata",
-      "email": "j.mata@vendasnatura.com",
-      "cnpj": "77.961.324/0001-10"
-    },
-    {
       "id": 2,
       "brand": "Avon",
       "sellerName": "Carla Pietro",
-      "email": "carla.pietro@avon.com",
-      "cnpj": "34.226.169/0001-86"
+      "cnpj": "33226169000186"
+    },
+    {
+      "id": 3,
+      "brand": "Natura",
+      "sellerName": "Carla",
+      "cnpj": "12312312312312"
     }
   ],
   "products": [

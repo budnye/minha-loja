@@ -75,7 +75,7 @@ export class ClientsModalComponent implements OnInit {
   async deleteClient(client: Client) {
     const alert = await this.alertController.create({
       header: 'Confirmação de exclusão',
-      message: `Deseja excluir o client ${client.name}?`,
+      message: `Deseja excluir o cliente ${client.name}?`,
       buttons: [
         {
           text: 'Sim',
