@@ -190,16 +190,31 @@
     {
       "id": 1,
       "name": "Kit Natura 1",
-      "price": 79.9
+      "description": "Kit com sabonete e shampoo",
+      "price": 79.9,
+      "supplier": {
+        "id": 2,
+        "brand": "Avon",
+        "sellerName": "Carla Pietro",
+        "cnpj": "33226169000186"
+      }
     },
     {
       "id": 3,
       "name": "Sabonete Maracujá",
-      "price": 19.9
+      "description": "Um cheiroso sabonete natural",
+      "price": 19.9,
+      "supplier": {
+        "id": 2,
+        "brand": "Avon",
+        "sellerName": "Carla Pietro",
+        "cnpj": "33226169000186"
+      }
     },
     {
       "id": 4,
       "name": "Sabonete Menta",
+      "description": "Um cheiroso sabonete natural",
       "price": 19.9
     }
   ],
