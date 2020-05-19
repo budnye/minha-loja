@@ -10,6 +10,11 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<ion-fab *ngIf="!isNew" vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button color="danger" (click)="deleteClient(client)">
+    <ion-icon name="trash" color="light"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 <ion-content>
   <form #clientForm="ngForm" novalidate>
     <ion-item class="txt-white" color="none" lines="white">

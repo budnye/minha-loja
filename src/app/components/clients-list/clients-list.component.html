@@ -1,3 +1,7 @@
+<ion-button (click)="newClientModal()" fill="outline" color="light" shape="round">
+  <ion-icon slot="icon-only" name="person-add" color="light">
+  </ion-icon>
+</ion-button>
 <ion-list class="bg-transparent">
   <clients-list-item (updateList)="list()" *ngFor="let client of clients" [client]="client"></clients-list-item>
 </ion-list>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, ModalController } from '@ionic/angular';
 import { ClientService } from 'src/app/services/client.service';
+import { ClientsModalComponent } from 'src/app/components/clients-modal/clients-modal.component';
+
+
 
 
 @Component({
@@ -10,9 +13,12 @@ import { ClientService } from 'src/app/services/client.service';
 })
 export class ClientsListComponent implements OnInit {
   clients: any[];
+  client: Client;
+
   constructor(
     private loadingController: LoadingController,
     private clientsService: ClientService,
+    private modalController: ModalController
   ) { }
 
   async list() {
@@ -34,4 +40,23 @@ export class ClientsListComponent implements OnInit {
     this.list();
   }
 
+
+  async newClientModal() {
+    this.client = {
+      id: null,
+      name: '',
+      cpf: '',
+      birth: new Date(),
+    };
+    const modal = await this.modalController.create({
+      component: ClientsModalComponent,
+      componentProps: {
+        client: this.client,
+        isReadonly: false,
+        isNew: true,
+        listComponent: this
+      }
+    });
+    return await modal.present();
+  }
 }
