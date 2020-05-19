@@ -1,0 +1,8 @@
+<ion-button (click)="newDeliveryModal()" fill="outline" color="light" shape="round">
+  <ion-icon slot="icon-only" name="add-circle" color="light">
+  </ion-icon>
+</ion-button>
+<ion-list class="bg-transparent">
+  <delivery-list-item (updateList)="list()" *ngFor="let delivery of deliveries" [delivery]="delivery">
+  </delivery-list-item>
+</ion-list>

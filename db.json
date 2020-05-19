@@ -1,48 +1,182 @@
 {
   "deliveries": [
     {
-      "id": 5,
-      "title": "Entrega 5",
+      "id": 1,
+      "title": "Entrega 1",
       "products": [
-        {
-          "id": 1,
-          "name": "Kit Natura 1",
-          "price": 79,
-          "qnt": 1
-        },
-        {
-          "id": 3,
-          "name": "Sabonete Maracujá",
-          "price": 19,
-          "qnt": 1
-        }
+        [
+          {
+            "id": 1,
+            "name": "Kit Natura 1",
+            "description": "Kit com sabonete e shampoo",
+            "price": 79.9,
+            "supplier": {
+              "id": 2,
+              "brand": "Avon",
+              "sellerName": "Carla Pietro",
+              "cnpj": "33226169000186"
+            }
+          },
+          {
+            "id": 3,
+            "name": "Sabonete Maracujá",
+            "description": "Um cheiroso sabonete natural",
+            "price": 19.9,
+            "supplier": {
+              "id": 2,
+              "brand": "Avon",
+              "sellerName": "Carla Pietro",
+              "cnpj": "33226169000186"
+            }
+          },
+          {
+            "id": 4,
+            "name": "Sabonete Menta",
+            "description": "Um cheiroso sabonete natural",
+            "price": 19.9
+          }
+        ]
       ],
       "client": {
-        "id": 1,
-        "name": "Eduardo Budny"
+        "id": 3,
+        "name": "Camila Citadin",
+        "cpf": "05606847973",
+        "birth": "2020-05-14"
       },
       "isRead": false
     },
     {
-      "id": 6,
-      "title": "Entrega 6",
+      "id": 2,
+      "title": "Entrega 2",
       "products": [
-        {
-          "id": 1,
-          "name": "Kit Natura 1",
-          "price": 79,
-          "qnt": 1
-        },
-        {
-          "id": 3,
-          "name": "Sabonete Maracujá",
-          "price": 19,
-          "qnt": 1
-        }
+        [
+          {
+            "id": 1,
+            "name": "Kit Natura 1",
+            "description": "Kit com sabonete e shampoo",
+            "price": 79.9,
+            "supplier": {
+              "id": 2,
+              "brand": "Avon",
+              "sellerName": "Carla Pietro",
+              "cnpj": "33226169000186"
+            }
+          },
+          {
+            "id": 3,
+            "name": "Sabonete Maracujá",
+            "description": "Um cheiroso sabonete natural",
+            "price": 19.9,
+            "supplier": {
+              "id": 2,
+              "brand": "Avon",
+              "sellerName": "Carla Pietro",
+              "cnpj": "33226169000186"
+            }
+          },
+          {
+            "id": 4,
+            "name": "Sabonete Menta",
+            "description": "Um cheiroso sabonete natural",
+            "price": 19.9
+          }
+        ]
       ],
       "client": {
-        "id": 1,
-        "name": "Eduardo Budny"
+        "id": 3,
+        "name": "Camila Citadin",
+        "cpf": "05606847973",
+        "birth": "2020-05-14"
+      },
+      "isRead": false
+    },
+    {
+      "id": 3,
+      "title": "Entrega 3",
+      "products": [
+        [
+          {
+            "id": 1,
+            "name": "Kit Natura 1",
+            "description": "Kit com sabonete e shampoo",
+            "price": 79.9,
+            "supplier": {
+              "id": 2,
+              "brand": "Avon",
+              "sellerName": "Carla Pietro",
+              "cnpj": "33226169000186"
+            }
+          },
+          {
+            "id": 3,
+            "name": "Sabonete Maracujá",
+            "description": "Um cheiroso sabonete natural",
+            "price": 19.9,
+            "supplier": {
+              "id": 2,
+              "brand": "Avon",
+              "sellerName": "Carla Pietro",
+              "cnpj": "33226169000186"
+            }
+          },
+          {
+            "id": 4,
+            "name": "Sabonete Menta",
+            "description": "Um cheiroso sabonete natural",
+            "price": 19.9
+          }
+        ]
+      ],
+      "client": {
+        "id": 3,
+        "name": "Camila Citadin",
+        "cpf": "05606847973",
+        "birth": "2020-05-14"
+      },
+      "isRead": false
+    },
+    {
+      "id": 4,
+      "title": "Entrega 4",
+      "products": [
+        [
+          {
+            "id": 1,
+            "name": "Kit Natura 1",
+            "description": "Kit com sabonete e shampoo",
+            "price": 79.9,
+            "supplier": {
+              "id": 2,
+              "brand": "Avon",
+              "sellerName": "Carla Pietro",
+              "cnpj": "33226169000186"
+            }
+          },
+          {
+            "id": 3,
+            "name": "Sabonete Maracujá",
+            "description": "Um cheiroso sabonete natural",
+            "price": 19.9,
+            "supplier": {
+              "id": 2,
+              "brand": "Avon",
+              "sellerName": "Carla Pietro",
+              "cnpj": "33226169000186"
+            }
+          },
+          {
+            "id": 4,
+            "name": "Sabonete Menta",
+            "description": "Um cheiroso sabonete natural",
+            "price": 19.9
+          }
+        ]
+      ],
+      "client": {
+        "id": 3,
+        "name": "Camila Citadin",
+        "cpf": "05606847973",
+        "birth": "2020-05-14"
       },
       "isRead": false
     }
@@ -66,110 +200,6 @@
       "email": "",
       "cpf": "12345654345",
       "birth": "2020-05-18"
-    },
-    {
-      "id": 10,
-      "name": "teste 123",
-      "email": "",
-      "cpf": "22222222222",
-      "birth": "2020-05-18"
-    },
-    {
-      "id": 11,
-      "name": "2342343 fff",
-      "email": "",
-      "cpf": "23423423423",
-      "birth": "2020-04-17"
-    },
-    {
-      "id": 12,
-      "name": "Trololo 3",
-      "email": "",
-      "cpf": "22333223232",
-      "birth": "2020-05-18"
-    },
-    {
-      "id": 14,
-      "name": "eeee",
-      "email": "",
-      "cpf": "33333333333",
-      "birth": "2020-05-18T22:37:43.398Z"
-    },
-    {
-      "id": 15,
-      "name": "reeee",
-      "email": "",
-      "cpf": "23232323232",
-      "birth": "2020-05-18T22:37:41.495Z"
-    },
-    {
-      "id": 16,
-      "name": "eeee",
-      "email": "",
-      "cpf": "33333333333",
-      "birth": "2020-05-18T22:37:43.398Z"
-    },
-    {
-      "id": 19,
-      "name": "eeeee",
-      "email": "",
-      "cpf": "42342342343",
-      "birth": "2020-05-18"
-    },
-    {
-      "id": 20,
-      "name": "last",
-      "email": "",
-      "cpf": "12312312312",
-      "birth": "2020-05-18T23:21:40.890Z"
-    },
-    {
-      "id": 21,
-      "name": "Boss",
-      "email": "",
-      "cpf": "23423423423",
-      "birth": "2020-05-13"
-    },
-    {
-      "id": 22,
-      "name": "teste new",
-      "email": "",
-      "cpf": "23423423423",
-      "birth": "2020-05-19"
-    },
-    {
-      "id": 23,
-      "name": "ooeoeoe`",
-      "email": "",
-      "cpf": "23423434344",
-      "birth": "2020-05-19T06:32:01.771Z"
-    },
-    {
-      "id": 24,
-      "name": "ooeoeoe`",
-      "email": "",
-      "cpf": "23423434344",
-      "birth": "2020-05-19T06:32:01.771Z"
-    },
-    {
-      "id": 26,
-      "name": "4444",
-      "email": "",
-      "cpf": "44444444444",
-      "birth": "2020-05-19T06:53:35.548Z"
-    },
-    {
-      "id": 28,
-      "name": "help 3",
-      "email": "",
-      "cpf": "33333333333",
-      "birth": "2020-05-19"
-    },
-    {
-      "id": 29,
-      "name": "novo teste 2",
-      "cpf": "12343234323",
-      "birth": "2020-05-19"
     }
   ],
   "suppliers": [

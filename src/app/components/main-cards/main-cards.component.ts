@@ -17,10 +17,10 @@ export class MainCardsComponent implements OnInit {
   ) { }
 
   getProducts(products) {
-    if (products.length == 1) {
+    if (products[0][0].length == 1) {
       return products[0].name;
     } else {
-      return `${products[0].name} ...`;
+      return `${products[0][0].name} ...`;
     }
   }
 
@@ -39,10 +39,10 @@ export class MainCardsComponent implements OnInit {
   }
   getTotal(products: any[]) {
     let total: number = 0;
-    products.map((product) => {
+    products[0].map((product) => {
       total = total + product.price;
     });
-    return total;
+    return (Math.round(total * 100) / 100).toFixed(2);
   }
 
   async confirmDelete(delivery: Delivery) {
