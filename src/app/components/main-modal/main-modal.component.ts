@@ -26,14 +26,6 @@ export class MainModalComponent {
     this.navParams.data.slides.updateCards();
   }
 
-  getTotal(products: any[]) {
-    let total = 0;
-    products.map((product) => {
-      total = total + product.price;
-    });
-    return total;
-  }
-
   async confirmDelete(delivery: Delivery) {
     const alerta = await this.alertController.create({
       header: 'Confirmação de finalização',

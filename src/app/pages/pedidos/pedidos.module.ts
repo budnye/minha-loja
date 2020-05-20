@@ -8,6 +8,9 @@ import { PedidosPageRoutingModule } from './pedidos-routing.module';
 
 import { PedidosPage } from './pedidos.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { OrdersListComponent } from 'src/app/components/orders-list/orders-list.component';
+import { OrdersListItemComponent } from 'src/app/components/orders-list-item/orders-list-item.component';
+import { OrdersModalComponent } from 'src/app/components/orders-modal/orders-modal.component';
 
 @NgModule({
   imports: [
@@ -17,6 +20,9 @@ import { ComponentsModule } from 'src/app/components/components.module';
     PedidosPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [PedidosPage]
+  declarations: [PedidosPage, OrdersListComponent, OrdersListItemComponent, OrdersModalComponent],
+  entryComponents: [
+    OrdersModalComponent
+  ]
 })
 export class PedidosPageModule { }

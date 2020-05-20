@@ -11,11 +11,11 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() { }
   getTotal(products: any[]) {
-    let total: number = 0;
+    let total = 0;
     products.map((product) => {
       total = total + product.price;
     });
-    return total;
+    return (Math.round(total * 100) / 100).toFixed(2);
   }
 
 }

@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, LoadingController, AlertController, NavParams } from '@ionic/angular';
-import { ClientService } from 'src/app/services/client.service';
+import { OrderService } from 'src/app/services/order.service';
 import { ProductsService } from 'src/app/services/products.service';
-import { DeliveryService } from 'src/app/services/delivery.service';
+import { SuppliersService } from 'src/app/services/suppliers.service';
 
 @Component({
-  selector: 'app-delivery-modal',
-  templateUrl: './delivery-modal.component.html',
-  styleUrls: ['./delivery-modal.component.scss'],
+  selector: 'app-orders-modal',
+  templateUrl: './orders-modal.component.html',
+  styleUrls: ['./orders-modal.component.scss'],
 })
-export class DeliveryModalComponent implements OnInit {
-  delivery: Delivery;
-  clients: Client[];
+export class OrdersModalComponent implements OnInit {
+  suppliers: Supplier[];
   products: Product[];
   isReadonly: boolean;
   isNew: boolean;
@@ -19,8 +18,8 @@ export class DeliveryModalComponent implements OnInit {
   constructor(
     private modalController: ModalController,
     private loadingController: LoadingController,
-    private deliveryService: DeliveryService,
-    private clientService: ClientService,
+    private orderService: OrderService,
+    private suppliersService: SuppliersService,
     private productsService: ProductsService,
     private alertController: AlertController,
     public navParams: NavParams
@@ -55,18 +54,18 @@ export class DeliveryModalComponent implements OnInit {
   editForm() {
     this.isReadonly = false;
   }
-  async saveDelivery(delivery: Delivery) {
+  async saveOrder(order: Order) {
     const loading = await this.loadingController.create({
       message: 'Salvando produto...',
     });
     const alert = await this.alertController.create({
       header: 'Confirmação de finalização',
-      message: `Deseja salvar as alterações na venda ${delivery.title}?`,
+      message: `Deseja salvar as alterações no pedido ${order.title}?`,
       buttons: [{
         text: 'SIM',
         handler: () => {
-          this.deliveryService
-            .save(delivery)
+          this.orderService
+            .save(order)
             .subscribe(() => {
               this.isReadonly = true;
               loading.dismiss();
@@ -79,14 +78,14 @@ export class DeliveryModalComponent implements OnInit {
     });
     alert.present();
   }
-  async deleteDelivery(delivery: Delivery) {
+  async deleteOrder(order: Order) {
     const alert = await this.alertController.create({
       header: 'Confirmação de exclusão',
-      message: `Deseja excluir da venda ${delivery.title}?`,
+      message: `Deseja excluir da venda ?`,
       buttons: [
         {
           text: 'Sim',
-          handler: () => this.delete(delivery)
+          handler: () => this.delete(order)
         },
         {
           text: 'Não'
@@ -95,22 +94,22 @@ export class DeliveryModalComponent implements OnInit {
     });
     alert.present();
   }
-  private async delete(delivery: Delivery) {
+  private async delete(order: Order) {
     const loading = await this.loadingController.create({
-      message: 'Excluindo venda...',
+      message: 'Excluindo pedido...',
     });
-    this.deliveryService.delete(delivery).subscribe(() => {
+    this.orderService.delete(order).subscribe(() => {
       loading.dismiss();
       this.dismissModal();
     });
   }
 
-  async listClients() {
+  async listSuppliers() {
     const loading = await this.loadingController.create({
-      message: 'Carregando clientes...',
+      message: 'Carregando fornecedores...',
     });
-    this.clientService.getClients().subscribe((clients) => {
-      this.clients = clients;
+    this.suppliersService.getSuppliers().subscribe((suppliers) => {
+      this.suppliers = suppliers;
       loading.dismiss();
     });
   }
@@ -124,6 +123,9 @@ export class DeliveryModalComponent implements OnInit {
     });
   }
   getTotal(products: any[]) {
+    if (!products[0]) {
+      return 0;
+    }
     let total: number = 0;
     products[0].map((product) => {
       total = total + product.price;
@@ -134,8 +136,9 @@ export class DeliveryModalComponent implements OnInit {
   compareWith(data1: any, data2: any) {
     return data1 && data2 ? data1.id === data2.id : data1 === data2;
   };
+
   ngOnInit() {
-    this.listClients();
+    this.listSuppliers();
     this.listProducts();
   }
 }

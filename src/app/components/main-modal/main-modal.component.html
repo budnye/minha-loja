@@ -17,7 +17,7 @@
   <ion-item class="txt-white" color="none" lines="white">
     <p>{{delivery.client.name}}</p>
   </ion-item>
-  <product-list [products]="delivery.products"></product-list>
+  <product-list [products]="delivery.products[0]"></product-list>
   <ion-item class="txt-white" color="none" lines="none">
     <ion-button color="danger" slot="start" size="default" (click)="dismissModal()">
       Cancelar
