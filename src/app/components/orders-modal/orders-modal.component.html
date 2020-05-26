@@ -42,10 +42,11 @@
         <h2><b>Fornecedor</b></h2>
       </ion-label>
     </ion-item>
-    <ion-item class="txt-white" color="none" lines="white">
+    <ion-item *ngIf="isReadonly" class="txt-white" color="none" lines="white">{{order.supplier.brand}}</ion-item>
+    <ion-item class="txt-white" color="none" lines="white" *ngIf="!isReadonly">
       <ion-select [(ngModel)]="order.supplier" multiple="false" placeholder="Selecione o fornecedor"
-        [compareWith]="compareWith" name="supplier">
-        <ion-select-option *ngFor="let supplier of suppliers" [value]="supplier" [disabled]="isReadonly">
+        [compareWith]="compareSupplier" name="supplier">
+        <ion-select-option *ngFor="let supplier of suppliers" [value]="supplier">
           {{supplier.brand}}
         </ion-select-option>
       </ion-select>
@@ -55,10 +56,15 @@
         <h2><b>Produtos</b></h2>
       </ion-label>
     </ion-item>
-    <ion-item class="txt-white" color="none" lines="white">
-      <ion-select [(ngModel)]="order.products" multiple="true" placeholder="Selecione os produtos"
-        [compareWith]="compareWith" name="products">
-        <ion-select-option *ngFor="let product of products" [value]="products" [disabled]="isReadonly">
+    <div *ngIf="isReadonly">
+      <ion-item *ngFor="let product of order.products[0]" class="txt-white" color="none" lines="white">
+        {{ product.name }}
+      </ion-item>
+    </div>
+    <ion-item class="txt-white" color="none" lines="white" *ngIf="!isReadonly">
+      <ion-select [(ngModel)]="order.products[0]" multiple="true" placeholder="Selecione os produtos"
+        [compareWith]="compareProduct" name="product">
+        <ion-select-option *ngFor="let product of products" [value]="product">
           {{product.name}}
         </ion-select-option>
       </ion-select>

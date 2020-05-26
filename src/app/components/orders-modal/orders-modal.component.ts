@@ -133,8 +133,12 @@ export class OrdersModalComponent implements OnInit {
     return (Math.round(total * 100) / 100).toFixed(2);
   }
 
-  compareWith(data1: any, data2: any) {
-    return data1 && data2 ? data1.id === data2.id : data1 === data2;
+  compareSupplier(supplier1: Supplier, supplier2: Supplier) {
+    return supplier1 && supplier2 ? supplier1.id === supplier2.id : supplier1 === supplier2;
+  };
+
+  compareProduct(product1: Product, product2: Product) {
+    return product1 && product2 ? product1.id === product2.id : product1 === product2;
   };
 
   ngOnInit() {

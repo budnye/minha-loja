@@ -124,6 +124,9 @@ export class DeliveryModalComponent implements OnInit {
     });
   }
   getTotal(products: any[]) {
+    if (!products[0]) {
+      return 0;
+    }
     let total: number = 0;
     products[0].map((product) => {
       total = total + product.price;
@@ -131,8 +134,12 @@ export class DeliveryModalComponent implements OnInit {
     return (Math.round(total * 100) / 100).toFixed(2);
   }
 
-  compareWith(data1: any, data2: any) {
-    return data1 && data2 ? data1.id === data2.id : data1 === data2;
+  compareClient(client1: Client, client2: Client) {
+    return client1 && client2 ? client1.id === client2.id : client1 === client2;
+  };
+
+  compareProduct(product1: Product, product2: Product) {
+    return product1 && product2 ? product1.id === product2.id : product1 === product2;
   };
   ngOnInit() {
     this.listClients();

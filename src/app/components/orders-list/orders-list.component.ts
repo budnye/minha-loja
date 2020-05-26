@@ -41,7 +41,7 @@ export class OrdersListComponent implements OnInit {
   async newOrderModal() {
     this.order = {
       id: null,
-      title: 'Teste',
+      title: '',
       supplier: '',
       products: [],
     };
