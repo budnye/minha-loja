@@ -246,6 +246,12 @@
       "name": "Junior Medeiros",
       "cpf": "12341234122",
       "birth": "1996-04-26"
+    },
+    {
+      "id": 12,
+      "name": "Teste 234",
+      "cpf": "23423423434",
+      "birth": "2020-06-05"
     }
   ],
   "suppliers": [
