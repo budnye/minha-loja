@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ClientService {
-  private URI = 'http://localhost:8080/api-loja/resources/clients';
+  private URI = 'http://localhost:8081/api-loja/resources/clients';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -30,6 +30,7 @@ export class ClientService {
   }
 
   save(client: Client) {
+    console.log(JSON.stringify(client));
     if (client.id) {
       return this.update(client);
     } else {
